@@ -20,7 +20,7 @@ module.exports = function() {
           this.waitForText('Welcome', 10);
       },
 
-      logout: function() {
+      logout1: function() {
           this.click('Logout');
           this.seeElement('#header-login')
       },
@@ -51,6 +51,8 @@ module.exports = function() {
       },
 
       amOnChartOfAcccountsTab: function(){
+          this.click('//a[@href="#/chartOfAccounts/allAccounts"]')
+          this.waitForElement('//button[contains(., "Add Sub Account")]', 2)
           this.click('//a[@href="#/chartOfAccounts/allAccounts"]')
           this.waitForElement('//button[contains(., "Add Sub Account")]', 2)
       },
